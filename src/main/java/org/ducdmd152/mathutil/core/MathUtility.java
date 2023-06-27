@@ -15,17 +15,26 @@ public class MathUtility {
     // 0! = 1! = 1
     // vì giai thừa tăng rất nhanh, 21! long không chứa nổi (long ~ 18 số 0, ~ 20! vừa đủ)
     // 21! 22! 23! > 20! => CHỬI, ném Exception
+//    public static long getFactorial(int n) {
+//        if(n < 0 || n > 20)
+//            throw new IllegalArgumentException("Invalid argument n, n must be between 0..20, plz");
+//        if(n == 0 || n == 1)
+//            return 1;
+//        
+//        long product = 1;
+//        for(int i = 2; i <= n; i++)
+//            product *= i;
+//        
+//        return product;
+//    }
+    
     public static long getFactorial(int n) {
         if(n < 0 || n > 20)
             throw new IllegalArgumentException("Invalid argument n, n must be between 0..20, plz");
         if(n == 0 || n == 1)
             return 1;
         
-        long product = 1;
-        for(int i = 2; i <= n; i++)
-            product *= i;
-        
-        return product;
+        return n * getFactorial(n-1);
     }
 }
 
