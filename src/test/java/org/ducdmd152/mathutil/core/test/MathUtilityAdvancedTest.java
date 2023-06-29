@@ -13,7 +13,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 /**
  *
- * @author MSI
+ * @author ducdmd152
  */
 public class MathUtilityAdvancedTest {
     
@@ -35,6 +35,4 @@ public class MathUtilityAdvancedTest {
     public void testFactorialGivenRightArgumentReturnsWell(int n, long expected) {
         assertEquals(expected, MathUtility.getFactorial(n));
     }
-    
-    
 }
